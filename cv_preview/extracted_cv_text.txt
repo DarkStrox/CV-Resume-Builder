@@ -1,0 +1,161 @@
+--- PAGE 1 ---
+Mohamed Mostafa Helal
+AI & Deep Learning Engineer
+/DarkStrox
+https://www.linkedin.com/in/mohamed-mostafa-454b70271/
+Giza / Egypt mohamed200031921@gmail.com Single
++20 103 046 9659 Graduated 2026 Exempted from Military
+Summary:
+An AI & Deep Learning Engineer specialized in engineering and scaling high-impact AI applications across Large
+Language Models (LLMs), Agentic Systems, Computer Vision, and Real-Time Video Analytics. Experienced as Lead AI
+Engineer architecting and publishing Small Language Models (SLMs) for structured tool calling (BFCL v4
+Leaderboard), building local hybrid RAG architectures, and deploying hardware-accelerated computer vision
+pipelines on multi-camera streams with real-time 30+ FPS frame ingestion. Alongside strong capabilities in full-stack
+architecture, API integration, and edge intelligence.
+Work Experience:
+Samsung Innovation Campus ( July 2024 - October 2024 )
+AI & Data Science Resident Intern
+Drug Control & Addiction Prevention Fund ( 2024 - 2025 )
+Lead Full-Stack Developer — Mutatawi' Rasmi (رﺳﻤﻲ  ﻣﺘﻄﻮع )
+Aitronix ( 2026 - Present )
+Lead AI & Computer Vision Engineer
+Co-developed a quantitative financial forecasting framework by processing raw market data and extracting 15
+specialized feature parameters (rolling standard deviations, momentum indices).
+•
+Constructed and optimized predictive models using XGBoost, Random Forest, and SARIMA structures,
+systematically driving down Mean Absolute Percentage Error (MAPE) from 8.3% to 6.5%.
+•
+Conducted extensive exploratory data analysis (EDA) across retention datasets using Pandas; built interactive
+analytical dashboards with Plotly and Seaborn to track operational attrition trends.
+•
+Created the entire application ecosystem from scratch, designing responsive layouts, specialized backend logic,
+and structured database schema to streamline anti-drug youth initiatives in Egypt.
+•
+Built data-driven regional risk visualizations and automated hotspot tracking maps across Egyptian governorates
+for focused administrative decision making.
+•
+Implemented user engagement engines, volunteer leaderboards, mission allocation tracking, and digital milestone
+verification rewards.
+•
+Lead AI Engineer on AitroniX 1s (2.6B Bilingual Agentic SLM on Hugging Face): fine-tuned hybrid Conv+Attention
+architecture; benchmarked on BFCL v4 AST (68.75% across 400 problems); optimized Q4_K_M GGUF (~1.56 GB)
+for mobile edge execution.
+•
+Engineered real-time computer vision pipelines, multi-camera RTSP streaming engines, and hardware-accelerated
+deep learning models across surveillance and traffic domains.
+•
+
+--- PAGE 2 ---
+Education:
+Bachelor of Computer Science ( 2022 - 2026 )
+Skills:
+AI & LLM Systems:
+Computer Vision & Multimodal:
+Languages:
+Programming & Frameworks:
+DataBases & DevOps:
+Social Skills:
+Courses & Certifications:
+Misr University for Science and Technology (MUST) — Major in Artificial Intelligence•
+Cumulative GPA: 3.62 / 4.0 (Excellent with Honors)•
+Graduation Project: Integrated AI Ecosystem for Arabian Horses (Grade: Excellent)•
+Assisted and built multiple applied AI, Computer Vision, and full-stack software architectures.•
+LLM Fine-Tuning (Unsloth, LoRA/QLoRA)•
+Structured Tool Calling (<tool_call> JSON/XML, AST)•
+AitroniX 1s (Hugging Face), BFCL v4 Leaderboard•
+Hybrid RAG (BM25 + FAISS RRF)•
+vLLM, SGLang, llama.cpp, Ollama, Transformers•
+Tokenization & Prompt Engineering•
+YOLO (v8, YOLO-World, YOLO26n)•
+Vision-Language Models (Florence-2, CLIP,
+Moondream)
+•
+Face Recognition (YuNet, SFace, Cosine Similarity)•
+3D CNNs, ConvNeXt, MobileNet, Transfer Learning•
+OpenCV, OpenCL GPU Acceleration, RTSP Streams•
+Spatial Heatmap Tracking & Speed Estimation•
+Arabic : Native / Fluent•
+English : Professional / Fluent•
+Python (NumPy, Pandas, Scikit-learn)•
+PyTorch, TensorFlow, Keras•
+C#, ASP.NET Core Web API•
+React.js, JavaScript (ES6+), HTML5, CSS3•
+ComfyUI (Stable Diffusion), DCGANs•
+PostgreSQL (pgvector extension)•
+SQL Server Database•
+n8n Workflow Automation & Webhooks•
+Docker, Git & GitHub•
+Team Leadership & Mentorship•
+Problem Solving & Critical Thinking•
+System Optimization & Latency Tuning•
+Samsung Innovation Campus Certified Professional in AI & Data Science (2024) — Issued by Samsung Electronics &
+Ministry of Communications and Information Technology (MCIT).
+•
+Deep Learning & Computer Vision Specialization — Comprehensive study in CNNs, Object Detection, and Transfer
+Learning.
+•
+Machine Learning & Advanced Statistical Modeling — Time-series forecasting, regression, and tree-based
+ensembles.
+•
+
+--- PAGE 3 ---
+Projects:
+AitroniX 1s (AitroniXAi-1s-GGUF) — Frontier Bilingual Reasoning & Agentic Model: Lead AI Engineer for the official
+GGUF release of AitroniX 1s (~2.6B params), an ultra-lightweight bilingual (Arabic/English) reasoning model on a hybrid
+Convolution + Attention architecture with 128K context and native <think> Chain-of-Thought reasoning. Achieved
+68.75% strict AST match on Berkeley Function-Calling Leaderboard (BFCL v4, all 400 problems) with 100% valid tool
+syntax (surpassing Qwen3.5−9B at 60.13%, Gemma-4−8B at 48.39%, and Gemma-4−2B at 35.98%). Scored 77.83 on
+ToolSandbox, 85.49% on IFStruct, 51.87% on AIME25 math, and lowest hallucination rate in class on AA Omniscience
+(-29.50). Optimized for private mobile edge inference (~1.56 GB) and production serving via vLLM and SGLang. (Hugging
+Face)
+•
+HyperRAG (Local Hybrid RAG Engine): Architected a localized, high-precision hybrid retrieval system combining dense
+vector search (FAISS) with sparse lexical indexing (BM25), merged via Reciprocal Rank Fusion (RRF) to eliminate dense
+search entity misses. Powered locally by llama.cpp using Google's Gemma 4 E4B for low-latency, private responses
+with 800−token dynamic chunking and direct document citation tracking.
+•
+Aitronix Real-Time High-FPS Face Recognition Engine: High-performance computer vision pipeline delivering single-
+pass grid face detection via YuNet (~2.5ms inference on GPU via OpenCL acceleration) and 128D deep feature
+embeddings via SFace with Cosine Similarity vector matching. Built non-blocking asynchronous multithreading with
+decoupled worker queues (30+ FPS) and a custom native LibJPEG byte decoder eliminating frame buffering delay over
+Wi-Fi, RTSP, and USB feeds to preserve real-time frame delivery.
+•
+CamScence & Spatial Traffic Analytics Deployment: Multi-camera edge video pipeline concurrently streaming 11+
+RTSP IP camera feeds with dynamic grid switching powered by YOLO. Integrated vehicle detection, persistent multi-
+object tracking, automated speed estimation (km/h), and spatial heatmap visualization for roadway congestion
+monitoring.
+•
+Real-Time Surveillance Threat & Burglary Detection: Second-by-second video surveillance pipeline combining
+Vision-Language Models (Microsoft Florence-2, OpenAI CLIP) with OpenCV for automated detection of theft, burglary,
+and physical violence. Utilized zero-shot visual classification and phrase grounding to score danger probabilities in real-
+time with automated dynamic alert banners.
+•
+Open-Vocabulary Real-Time Detection & Tracking (YOLO-World): Deployed YOLO-World open-vocabulary object
+detector to detect and track custom arbitrary natural language prompted concepts locally on GPU at 70+ FPS on high-
+speed video feeds without model retraining.
+•
+Dynamic WhatsApp AI Recruitment Assistant & RAG Pipeline: Event-driven data streaming pipeline in n8n triggered by
+Google Sheets updates, extracting embeddings into Supabase pgvector. Integrated an intelligent conversational
+agent via Meta WhatsApp Cloud API (ngrok) executing autonomous similarity vector retrieval for applicant screening and
+onboarding.
+•
+Integrated AI Ecosystem for Arabian Horses (Graduation Project): Architected an end-to-end multi-role web platform
+(React.js + ASP.NET Core REST API + SQL Server) for horse auctions, farm management (Marabet), and medical records.
+Integrated Python computer vision using ConvNeXt for horse pedigree/strain identification and price prediction.
+•
+NLP Architecture Benchmark on 50,000 IMDb Reviews: Benchmarked 6 model architectures: DistilBERT (91.36%), TF-
+IDF + Logistic Regression (89.94%), MLP/ANN (89.66%), GRU (86.89%), BiLSTM (86.61%), SimpleRNN (82.82%).
+Optimized GPU training with dual Nvidia T4 GPUs and FP16 mixed-precision.
+•
+Edge Multimodal VQA & Live Video Description (Moondream): Deployed Moondream lightweight VLM on edge
+hardware and Colab with live webcam integration for real-time Visual Question Answering (VQA) and continuous video
+description.
+•
+Generative AI & Synthesis Architectures: Engineered multi-checkpoint ComfyUI node workflows with Stable Diffusion;
+programmed DCGAN from scratch in TensorFlow/Keras (75 epochs on Anime Faces); built 3D CNN + MobileNet-LSTM
+violence detection and 38−class plant disease classifier (95.4% accuracy).
+•
+Personal Resume Intelligence Assistant: Local Retrieval-Augmented Generation (RAG) assistant querying CV records
+via Ollama and vector storage without reliance on external cloud APIs.
+•
+

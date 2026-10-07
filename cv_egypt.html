@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamed Mostafa Helal - Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 7mm 11mm 7mm 11mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      font-size: 8.35pt;
+      line-height: 1.32;
+    }
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    .page {
+      width: 100%;
+      position: relative;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+      border-bottom: 2px solid #0f172a;
+    }
+    .name {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      line-height: 1.1;
+    }
+    .headline {
+      font-size: 9.3pt;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 4px;
+      letter-spacing: 0.2px;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      font-size: 8pt;
+      color: #475569;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .contact-sep {
+      color: #cbd5e1;
+      font-size: 7.5pt;
+    }
+    .section {
+      margin-bottom: 6.5px;
+    }
+    .section-title {
+      font-size: 9.3pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      border-bottom: 1.2px solid #0f172a;
+      padding-bottom: 2px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .section-title .bar {
+      width: 3.5px;
+      height: 10.5px;
+      background-color: #0284c7;
+      display: inline-block;
+      border-radius: 1px;
+    }
+    .entry {
+      margin-bottom: 4.5px;
+    }
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+    .entry-header-row1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .entry-header-row2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 0.5px;
+      margin-bottom: 1.5px;
+    }
+    .entry-title {
+      font-size: 8.7pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .entry-subtitle {
+      font-size: 8.1pt;
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .entry-tech {
+      font-size: 7.6pt;
+      font-weight: 600;
+      color: #475569;
+      font-style: italic;
+    }
+    .entry-meta {
+      font-size: 7.8pt;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .entry-bullets {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 1px;
+    }
+    .entry-bullets li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 1.5px;
+      font-size: 8.1pt;
+      color: #334155;
+      line-height: 1.32;
+      text-align: justify;
+    }
+    .entry-bullets li:last-child {
+      margin-bottom: 0;
+    }
+    .entry-bullets li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: -0.5px;
+      color: #0284c7;
+      font-size: 8.2pt;
+    }
+    .highlight {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .metric-badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      padding: 0 3px;
+      border-radius: 3px;
+      font-size: 7.6pt;
+    }
+    code.inline-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.3pt;
+      color: #0369a1;
+      background: #f1f5f9;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+    }
+    .skill-row {
+      display: flex;
+      align-items: baseline;
+      font-size: 8.1pt;
+      line-height: 1.32;
+    }
+    .skill-category {
+      font-weight: 700;
+      color: #0f172a;
+      min-width: 142px;
+      flex-shrink: 0;
+    }
+    .skill-list {
+      color: #334155;
+    }
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 8.1pt;
+      background: #f8fafc;
+      padding: 4.5px 8px;
+      border-radius: 3px;
+      border-left: 3px solid #0284c7;
+      border-top: 1px solid #e2e8f0;
+      border-right: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 3.5px;
+    }
+    .cert-item:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+    <header class="header">
+      <div class="name">Mohamed Mostafa Helal</div>
+      <div class="headline">AI & Machine Learning Engineer | LLMs, Agentic Systems & Computer Vision</div>
+      <div class="contact-info">
+        
+        <span class="contact-item">Giza, Egypt</span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item"><a href="tel:+201030469659">+20 103 046 9659</a></span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item"><a href="mailto:mohamed200031921@gmail.com">mohamed200031921@gmail.com</a></span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">Military Status: Exempted</span>
+        
+      </div>
+      <div class="contact-info">
+        <span class="contact-item">LinkedIn: <a href="https://linkedin.com/in/mohamed-mostafa-454b70271" target="_blank">linkedin.com/in/mohamed-mostafa-454b70271</a></span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">GitHub: <a href="https://github.com/DarkStrox" target="_blank">github.com/DarkStrox</a></span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">Hugging Face: <a href="https://huggingface.co/AitroniXAI" target="_blank">huggingface.co/AitroniXAI</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Professional Summary</div>
+      <p style="font-size: 8.15pt; color: #334155; line-height: 1.34; text-align: justify;">
+        AI & Machine Learning Engineer and 2026 Computer Science graduate (GPA 3.62/4.0, Honors) specialized in LLM agentic systems, edge inference, and real-time computer vision. Developed AitroniX 1s at an AI startup under senior engineering direction—an open-source 2.6B bilingual reasoning SLM achieving <span class="highlight">68.75% strict AST match on BFCL v4</span>, optimized for mobile edge deployment via ~1.56 GB GGUF. Proven hands-on track record building local hybrid RAG architectures (FAISS + BM25) and deploying hardware-accelerated multi-stream video analytics pipelines running at <span class="highlight">30+ FPS</span>.
+      </p>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Professional Experience</div>
+      
+      <!-- Aitronix -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Aitronix (AI Startup)</span>
+          <span class="entry-meta">Giza, Egypt</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-subtitle">AI Engineer</span>
+          <span class="entry-meta">Jan 2026 – Present</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">AitroniX 1s Model Fine-Tuning:</span> Collaborated under Senior AI Engineer to fine-tune and release AitroniX 1s, an open-source 2.6B bilingual (Arabic/English) reasoning SLM on a hybrid Conv+Attention architecture with 128K context using Unsloth and LoRA/QLoRA.</li>
+          <li><span class="highlight">Structured Tool-Calling Evaluation:</span> Benchmarked structured tool calling on Berkeley Function-Calling Leaderboard (BFCL v4, 400 problems), achieving a <span class="highlight">68.75% strict AST match</span> and 100% valid tool syntax (vs. Qwen3.5-9B at 60.13% and Gemma-4-8B at 48.39%).</li>
+          <li><span class="highlight">Edge Quantization & Model Serving:</span> Quantized model weights into Q4_K_M GGUF (~1.56 GB memory footprint) for private on-device mobile execution and configured high-throughput server deployment using vLLM and SGLang.</li>
+          <li><span class="highlight">Real-Time Video Analytics:</span> Engineered hardware-accelerated computer vision pipelines and multi-camera RTSP streaming engines, sustaining <span class="highlight">30+ FPS</span> across concurrent live feeds via OpenCL GPU acceleration and asynchronous worker queues.</li>
+        </ul>
+      </div>
+
+      <!-- Drug Control Fund -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Drug Control & Addiction Prevention Fund</span>
+          <span class="entry-meta">Cairo, Egypt</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-subtitle">Full-Stack Developer — Mutatawi' Rasmi (متطوع رسمي)</span>
+          <span class="entry-meta">Jan 2024 – Dec 2025</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">End-to-End System Development:</span> Developed the Mutatawi' Rasmi web ecosystem from scratch, implementing responsive user interfaces, backend business logic, and relational database schemas to coordinate nationwide anti-drug youth initiatives.</li>
+          <li><span class="highlight">Geospatial Hotspot Analytics:</span> Engineered data-driven geospatial hotspot analytics and risk visualization maps across Egyptian governorates, empowering administrators to track field missions and allocate operational resources.</li>
+          <li><span class="highlight">Volunteer Operations & Engagement:</span> Implemented volunteer engagement modules, automated leaderboards, milestone verification workflows, and mission tracking modules to manage volunteer participation.</li>
+        </ul>
+      </div>
+
+      <!-- Samsung Innovation Campus -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Samsung Innovation Campus</span>
+          <span class="entry-meta">Giza, Egypt</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-subtitle">AI & Data Science Resident Intern</span>
+          <span class="entry-meta">Jul 2024 – Oct 2024</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Quantitative Feature Engineering:</span> Co-developed a quantitative time-series forecasting framework by processing raw market data and engineering 15 financial features, including rolling standard deviations, momentum indices, and historical lags.</li>
+          <li><span class="highlight">Predictive Modeling & Optimization:</span> Constructed and tuned ensemble regression and time-series models (XGBoost, Random Forest, and SARIMA), systematically reducing Mean Absolute Percentage Error (MAPE) from <span class="highlight">8.3% to 6.5%</span>.</li>
+          <li><span class="highlight">Exploratory Data Analysis & Dashboards:</span> Conducted extensive exploratory data analysis (EDA) on customer retention datasets using Pandas and designed interactive dashboards with Plotly and Seaborn to track operational attrition trends.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Projects (Part 1) -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Featured Technical Projects</div>
+
+      <!-- AitroniX 1s -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">AitroniX 1s: Bilingual 2.6B Agentic Reasoning SLM</span>
+          <span class="entry-meta"><a href="https://huggingface.co/AitroniXAI/AitroniXAi-1s-GGUF" target="_blank">Hugging Face Model</a> | Jan 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: Hybrid Conv+Attention Architecture, GGUF (Q4_K_M), Unsloth, BFCL v4 AST, vLLM, SGLang, llama.cpp</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Architecture & Open-Source Release:</span> Engineered an open-source 2.6B bilingual (Arabic/English) reasoning model featuring a hybrid Conv+Attention architecture, 128K context window, and native <code class="inline-code">&lt;think&gt;</code> Chain-of-Thought reasoning.</li>
+          <li><span class="highlight">Benchmark Evaluation:</span> Evaluated on Berkeley Function-Calling Leaderboard (BFCL v4 AST, 400 problems), achieving <span class="highlight">68.75% strict AST match</span> with 100% valid tool syntax (vs. Qwen3.5-9B at 60.13%, Gemma-4-8B at 48.39%, and Gemma-4-2B at 35.98%).</li>
+          <li><span class="highlight">Edge Inference:</span> Benchmarked 77.83 on ToolSandbox, 85.49% on IFStruct, 51.87% on AIME25 math, and quantized weights to Q4_K_M GGUF (~1.56 GB) for zero-latency private inference on mobile edge devices.</li>
+        </ul>
+      </div>
+
+      <!-- HyperRAG -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">HyperRAG: Local Hybrid RAG Engine (BM25 + FAISS with Gemma 4 E4B)</span>
+          <span class="entry-meta">Generative AI & Search | 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: FAISS, BM25, Reciprocal Rank Fusion (RRF), llama.cpp, Gemma 4 E4B, Python</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Hybrid Retrieval Pipeline:</span> Engineered a local hybrid retrieval pipeline combining dense vector search (<span class="highlight">FAISS</span>) with sparse lexical keyword search (<span class="highlight">BM25</span>) via <span class="highlight">Reciprocal Rank Fusion (RRF)</span>, eliminating keyword entity retrieval misses.</li>
+          <li><span class="highlight">Private Offline Inference:</span> Deployed local LLM generation via llama.cpp using Gemma 4 E4B for private, zero-cloud inference, featuring dynamic 800-token chunking (120-token overlap) and verifiable document citation tracking.</li>
+        </ul>
+      </div>
+
+      <!-- Face Recognition -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Aitronix Real-Time High-FPS Face Recognition Engine</span>
+          <span class="entry-meta">Computer Vision & Systems | 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: Python, OpenCV, YuNet, SFace, OpenCL GPU Acceleration, Multithreading, RTSP, LibJPEG</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">High-Speed Face Recognition:</span> Built a real-time face recognition pipeline utilizing YuNet for single-pass tensor face detection (~2.5ms inference via OpenCL GPU acceleration) and SFace for 128D embeddings with Cosine Similarity vector matching.</li>
+          <li><span class="highlight">Multithreading & Byte Decoding:</span> Designed non-blocking asynchronous multithreading with decoupled worker queues delivering sustained <span class="highlight">30+ FPS</span>; implemented custom native LibJPEG byte decoder to eliminate network buffering delay over RTSP and USB feeds.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page page-break">
+    <!-- Technical Projects (Part 2) -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Featured Technical Projects (Continued)</div>
+
+      <!-- CamScence -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">CamScence: Multi-Camera Edge Traffic Analytics System</span>
+          <span class="entry-meta">Video Analytics & Edge Vision | 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: YOLO (YOLO26n), RTSP Multi-Streaming (11+ Cameras), Speed Estimation, Spatial Heatmaps, Python</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Multi-Camera Edge Infrastructure:</span> Architected an edge video analytics system concurrently ingesting <span class="highlight">11+ RTSP IP camera streams</span> with dynamic multi-grid switching and automated feed monitoring.</li>
+          <li><span class="highlight">Tracking & Speed Estimation:</span> Implemented real-time vehicle detection, persistent multi-object tracking, automated vehicle speed estimation (<span class="highlight">km/h</span>), and spatial heatmap overlays for traffic congestion and bottleneck analysis.</li>
+        </ul>
+      </div>
+
+      <!-- Surveillance Threat Detection -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Real-Time Video Surveillance Threat & Burglary Detection</span>
+          <span class="entry-meta">Vision-Language Models & Security | 2025 – 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: Microsoft Florence-2, OpenAI CLIP, OpenCV, Zero-Shot Grounding, Python</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Multimodal Video Analysis:</span> Developed an automated video surveillance pipeline combining Vision-Language Models (<span class="highlight">Microsoft Florence-2, OpenAI CLIP</span>) and OpenCV to detect security incidents, burglary, and physical violence.</li>
+          <li><span class="highlight">Zero-Shot Alerting:</span> Applied zero-shot visual classification and phrase grounding to score threat probabilities frame-by-frame and trigger dynamic real-time on-screen security alerts.</li>
+        </ul>
+      </div>
+
+      <!-- YOLO-World -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Open-Vocabulary Real-Time Detection & Tracking (YOLO-World)</span>
+          <span class="entry-meta">Computer Vision & Zero-Shot AI | 2025 – 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: YOLO-World, Open-Vocabulary Vision, PyTorch, Real-Time GPU Tracking</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Promptable Zero-Shot Tracking:</span> Deployed YOLO-World to detect and track custom arbitrary natural language prompted visual concepts without model retraining or additional labeled data.</li>
+          <li><span class="highlight">High-FPS GPU Execution:</span> Optimized local GPU inference pipelines to execute real-time object tracking at <span class="highlight">70+ FPS</span> on high-speed video feeds while maintaining continuous spatial ID tracking.</li>
+        </ul>
+      </div>
+
+      <!-- Arabian Horses -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Integrated AI Ecosystem for Arabian Horses (Graduation Project)</span>
+          <span class="entry-meta">Full-Stack & AI Engineer | Sep 2025 – Jun 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech: React.js, ASP.NET Core REST API, SQL Server, Python, ConvNeXt, PyTorch</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Full-Stack Platform:</span> Architected an end-to-end multi-role web platform (React frontend, ASP.NET Core REST API backend, SQL Server) for horse auctions, farm management (Marabet), and medical record tracking.</li>
+          <li><span class="highlight">Deep Learning Pedigree & Valuation:</span> Integrated a Python deep learning pipeline utilizing <span class="highlight">ConvNeXt</span> for horse pedigree and strain identification alongside regression models for market valuation and price estimation (<span class="metric-badge">Grade: Excellent</span>).</li>
+        </ul>
+      </div>
+
+      <!-- Compressed Other Projects -->
+      <div style="font-size: 7.9pt; color: #475569; margin-top: 3.5px; padding: 3px 6px; background: #f8fafc; border-radius: 3px; border: 1px solid #e2e8f0;">
+        <strong style="color: #0f172a;">Additional Projects:</strong> NLP Benchmark (DistilBERT 91.36% on 50k IMDb reviews vs RNN/LSTM baselines with FP16); Dynamic WhatsApp AI Recruitment Assistant (n8n + Supabase pgvector + WhatsApp Cloud API); Moondream Edge VLM (webcam VQA); Plant Disease Classifier (38-class CNN, 95.4% accuracy).
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Technical Skills</div>
+      <div class="skills-container">
+        <div class="skill-row">
+          <span class="skill-category">LLMs & Agentic Systems:</span>
+          <span class="skill-list"><span class="highlight">LLM Fine-Tuning (Unsloth, LoRA/QLoRA)</span>, Structured Tool Calling (JSON/XML, AST), Function Calling, GGUF Quantization, vLLM, SGLang, llama.cpp, Ollama, Hugging Face Transformers, Tokenization, Prompt Engineering</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Retrieval & Search (RAG):</span>
+          <span class="skill-list"><span class="highlight">Hybrid RAG</span>, Dense Vector Search (FAISS), Sparse Lexical Indexing (BM25), Reciprocal Rank Fusion (RRF), Vector Databases (pgvector / Supabase)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Computer Vision & Multimodal:</span>
+          <span class="skill-list"><span class="highlight">YOLO (v8, YOLO-World, YOLO26n)</span>, Vision-Language Models (Florence-2, CLIP, Moondream), Face Recognition (YuNet, SFace), ConvNeXt, 3D CNNs, MobileNet, Transfer Learning, OpenCV, OpenCL GPU Acceleration, RTSP Multi-Streaming, Spatial Heatmaps</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Machine Learning & Analytics:</span>
+          <span class="skill-list"><span class="highlight">PyTorch, TensorFlow, Keras</span>, Scikit-learn, XGBoost, Random Forest, SARIMA, Time-Series Forecasting, Feature Engineering, Pandas, NumPy, Plotly, Seaborn</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Backend & Engineering:</span>
+          <span class="skill-list"><span class="highlight">Python, C#, ASP.NET Core Web API</span>, React.js, JavaScript, PostgreSQL, Microsoft SQL Server, RESTful APIs, Asynchronous Multithreading, n8n Automation, Docker, Git, GitHub</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Languages:</span>
+          <span class="skill-list">Arabic (Native / Fluent), English (Professional / Fluent)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Education</div>
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Misr University for Science and Technology (MUST)</span>
+          <span class="entry-meta">Giza, Egypt</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-subtitle">Bachelor of Science in Computer Science, Major in Artificial Intelligence</span>
+          <span class="entry-meta">Graduated: June 2026</span>
+        </div>
+        <div style="font-size: 8.1pt; color: #334155; display: flex; gap: 15px;">
+          <span><span class="highlight">Cumulative GPA:</span> <span class="metric-badge">3.62 / 4.0</span> (Excellent with Honors)</span>
+          <span><span class="highlight">Graduation Project:</span> Integrated AI Ecosystem for Arabian Horses (<span class="metric-badge">Grade: Excellent</span>)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" style="margin-bottom: 0;">
+      <div class="section-title"><span class="bar"></span>Certifications & Professional Credentials</div>
+      <div class="cert-item">
+        <div>
+          <strong style="color: #0f172a; font-size: 8.2pt;">Samsung Innovation Campus Certified Professional in Artificial Intelligence & Data Science</strong>
+          <div style="color: #64748b; font-size: 7.7pt; margin-top: 0.5px;">Issued by Samsung Electronics & Ministry of Communications and Information Technology (MCIT) • Machine Learning, Deep Learning, Statistical Modeling, and Computer Vision</div>
+        </div>
+        <div style="font-weight: 700; color: #0284c7; font-size: 8pt; white-space: nowrap; margin-left: 10px;">Issued: 2024</div>
+      </div>
+      <div class="cert-item">
+        <div>
+          <strong style="color: #0f172a; font-size: 8.2pt;">Deep Learning & Computer Vision Specialization</strong>
+          <div style="color: #64748b; font-size: 7.7pt; margin-top: 0.5px;">Comprehensive study in Convolutional Neural Networks (CNNs), Object Detection, and Transfer Learning Architectures</div>
+        </div>
+        <div style="font-weight: 700; color: #0284c7; font-size: 8pt; white-space: nowrap; margin-left: 10px;">Credential</div>
+      </div>
+      <div class="cert-item">
+        <div>
+          <strong style="color: #0f172a; font-size: 8.2pt;">Machine Learning & Advanced Statistical Modeling</strong>
+          <div style="color: #64748b; font-size: 7.7pt; margin-top: 0.5px;">Time-series forecasting, quantitative feature engineering, regression, and tree-based ensemble models</div>
+        </div>
+        <div style="font-weight: 700; color: #0284c7; font-size: 8pt; white-space: nowrap; margin-left: 10px;">Credential</div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamed Mostafa Helal - Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 8mm 12mm 8mm 12mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      font-size: 8.6pt;
+      line-height: 1.34;
+    }
+    a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    /* Page Containers */
+    .page {
+      width: 100%;
+      position: relative;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding-bottom: 7.5px;
+      margin-bottom: 7px;
+      border-bottom: 2px solid #0f172a;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      line-height: 1.1;
+    }
+    .headline {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 5px;
+      letter-spacing: 0.2px;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 8.2pt;
+      color: #475569;
+      font-weight: 500;
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-item svg {
+      width: 11px;
+      height: 11px;
+      fill: currentColor;
+      color: #0284c7;
+    }
+    .contact-sep {
+      color: #cbd5e1;
+      font-size: 7.5pt;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 7.5px;
+    }
+    .section-title {
+      font-size: 9.7pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4.5px;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid #0284c7;
+    }
+    .section-title .bar {
+      width: 4px;
+      height: 11px;
+      background: #0284c7;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* Skills Box */
+    .skills-container {
+      background: #f8fafc;
+      padding: 5px 8px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .skill-row {
+      font-size: 8.2pt;
+      line-height: 1.34;
+    }
+    .skill-category {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .skill-category::after {
+      content: ": ";
+    }
+    .skill-list {
+      color: #334155;
+    }
+    .skill-tag {
+      font-weight: 600;
+      color: #0369a1;
+    }
+
+    /* Common Entry Styles */
+    .entry {
+      margin-bottom: 6px;
+      break-inside: avoid;
+    }
+    .entry-p2 {
+      margin-bottom: 7.5px;
+      break-inside: avoid;
+    }
+    .entry:last-child, .entry-p2:last-child {
+      margin-bottom: 0;
+    }
+    .entry-header-row1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .entry-header-row2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 0.5px;
+      margin-bottom: 2px;
+    }
+    .entry-title {
+      font-size: 8.85pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .entry-subtitle {
+      font-size: 8.2pt;
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .entry-tech {
+      font-size: 7.75pt;
+      font-weight: 600;
+      color: #475569;
+      font-style: italic;
+    }
+    .entry-meta {
+      font-size: 7.95pt;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .entry-bullets {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 1px;
+    }
+    .entry-bullets li {
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2px;
+      font-size: 8.2pt;
+      color: #334155;
+      line-height: 1.34;
+      text-align: justify;
+    }
+    .entry-bullets li:last-child {
+      margin-bottom: 0;
+    }
+    .entry-bullets li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      top: -0.5px;
+      color: #0284c7;
+      font-size: 8.5pt;
+    }
+    .highlight {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .metric-badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      padding: 0 4px;
+      border-radius: 3px;
+      font-size: 7.75pt;
+    }
+    code.inline-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.4pt;
+      color: #0369a1;
+      background: #f1f5f9;
+      padding: 0 3px;
+      border-radius: 2px;
+    }
+
+    /* Certifications */
+    .cert-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.35pt;
+      background: #f8fafc;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border-left: 3.5px solid #0284c7;
+      border-top: 1px solid #e2e8f0;
+      border-right: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="name">Mohamed Mostafa Helal</div>
+      <div class="headline">AI & Deep Learning Engineer | LLM Fine-Tuning, Agentic Systems & Computer Vision</div>
+      <div class="contact-info">
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Giza, Egypt
+        </span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+201030469659">+20 103 046 9659</a>
+        </span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:mohamed200031921@gmail.com">mohamed200031921@gmail.com</a>
+        </span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          <a href="https://linkedin.com/in/mohamed-mostafa-454b70271" target="_blank">linkedin.com/in/mohamed-mostafa-454b70271</a>
+        </span>
+        <span class="contact-sep">•</span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <a href="https://github.com/DarkStrox" target="_blank">github.com/DarkStrox</a>
+        </span>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Education</div>
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Misr University for Science and Technology (MUST)</span>
+          <span class="entry-meta">Giza, Egypt</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-subtitle">Bachelor of Science in Computer Science, Major in Artificial Intelligence</span>
+          <span class="entry-meta">Graduated: June 2026</span>
+        </div>
+        <div style="font-size: 8.2pt; color: #334155;">
+          <span class="highlight">Cumulative GPA:</span> <span class="metric-badge">3.62 / 4.0</span> (Excellent with Honors)
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Technical Skills</div>
+      <div class="skills-container">
+        <div class="skill-row">
+          <span class="skill-category">LLMs & Agentic Systems</span>
+          <span class="skill-list"><span class="skill-tag">LLM Fine-Tuning (Unsloth, LoRA/QLoRA)</span>, AitroniX 1s (Hugging Face), Structured Tool Calling (<code class="inline-code">&lt;tool_call&gt;</code> JSON/XML, AST), BFCL v4 Leaderboard, Hybrid RAG (BM25 + FAISS RRF), vLLM, SGLang, llama.cpp, Ollama, Transformers, Tokenization & Prompt Engineering</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Computer Vision & Multimodal</span>
+          <span class="skill-list"><span class="skill-tag">YOLO (v8, YOLO-World, YOLO26n)</span>, Vision-Language Models (Microsoft Florence-2, OpenAI CLIP, Moondream), Face Recognition (YuNet, SFace), 3D CNNs, ConvNeXt, MobileNet, RTSP Multi-Streaming, OpenCL Acceleration, Speed Tracking & Spatial Heatmaps</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Deep Learning & NLP</span>
+          <span class="skill-list"><span class="skill-tag">PyTorch, TensorFlow, Keras</span>, CNNs, LSTMs, GRUs, DCGANs, ComfyUI (Stable Diffusion), Model Benchmarking (DistilBERT vs Baselines), Mixed-Precision (FP16), Scikit-learn, XGBoost, Random Forest, SARIMA</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Backend & Engineering</span>
+          <span class="skill-list"><span class="skill-tag">Python (NumPy, Pandas)</span>, C#, ASP.NET Core Web API, React.js, PostgreSQL (pgvector), SQL Server, n8n Automation, Webhooks, RESTful APIs, Multithreading & Async Queues, Git & GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Professional Experience</div>
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Samsung Innovation Campus</span>
+          <span class="entry-meta">Giza, Egypt</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-subtitle">AI & Data Science Resident Intern</span>
+          <span class="entry-meta">July 2024 – October 2024</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Quantitative Time-Series Analytics:</span> Co-developed a financial forecasting pipeline on raw daily market data, engineering 15 domain-specific feature parameters including rolling standard deviations, momentum indices, and historical lags.</li>
+          <li><span class="highlight">Predictive Modeling & Optimization:</span> Architected and tuned regression models using XGBoost, Random Forest, and SARIMA architectures, systematically decreasing Mean Absolute Percentage Error (MAPE) from <span class="highlight">8.3% to 6.5%</span>.</li>
+          <li><span class="highlight">Business Intelligence & KPI Dashboards:</span> Conducted extensive exploratory data analysis (EDA) on enterprise customer retention datasets using Pandas; built interactive analytics dashboards with Plotly and Seaborn to track operational attrition metrics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured Projects (Part 1) -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Featured AI, LLM & Computer Vision Projects</div>
+
+      <!-- AitroniX 1s -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">AitroniX 1s (AitroniXAi-1s-GGUF): Bilingual 2.6B Reasoning & Agentic Model</span>
+          <span class="entry-meta">Lead AI Engineer | <a href="https://huggingface.co/AitroniXAI/AitroniXAi-1s-GGUF" target="_blank" style="color: #0284c7;">Hugging Face</a></span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: Hybrid Conv+Attention Architecture, GGUF (Q4_K_M), Unsloth, BFCL v4 AST, vLLM, SGLang, llama.cpp</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Architecture & Open-Source Release:</span> Lead AI Engineer developing AitroniX 1s (~2.6B params, ~1.56 GB GGUF), an ultra-lightweight bilingual (Arabic/English) reasoning model with 128K context and native <code class="inline-code">&lt;think&gt;...&lt;/think&gt;</code> Chain-of-Thought reasoning.</li>
+          <li><span class="highlight">Defensible Benchmark Evaluations:</span> Outperformed larger models on official benchmarks: <span class="highlight">68.75% strict AST match on BFCL v4 (all 400 problems)</span> with 100% valid tool syntax (vs. Qwen3.5-9B 60.13%, Gemma-4-8B 48.39%, Gemma-4-2B 35.98%); scored <span class="metric-badge">77.83 ToolSandbox</span>, <span class="highlight">85.49% IFStruct</span>, and <span class="highlight">51.87% AIME25</span> math.</li>
+          <li><span class="highlight">Edge & Production Deployment:</span> Engineered for private on-device mobile inference (iOS/Android at ~1.56 GB RAM); validated high-throughput serving with vLLM and SGLang OpenAI-compatible API endpoints.</li>
+        </ul>
+      </div>
+
+      <!-- HyperRAG -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">HyperRAG: Local Hybrid RAG Engine (BM25 + FAISS with Gemma 4 E4B)</span>
+          <span class="entry-meta">Generative AI & Search | 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: FAISS, BM25, Reciprocal Rank Fusion (RRF), llama.cpp, Gemma 4 E4B, Python</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Hybrid Retrieval Pipeline:</span> Fused dense vector search (<span class="highlight">FAISS</span>) with sparse lexical keyword indexing (<span class="highlight">BM25</span>) via <span class="highlight">Reciprocal Rank Fusion (RRF)</span>, eliminating dense search recall failures on exact character names, specialized lore, and domain entities.</li>
+          <li><span class="highlight">Local Private Inference:</span> Integrated local LLM generation via <span class="highlight">llama.cpp</span> utilizing Google's Gemma 4 E4B for private offline inference without cloud dependencies, implementing dynamic chunking (800 tokens, 120 overlap) and direct citation tracking.</li>
+        </ul>
+      </div>
+
+      <!-- Aitronix Face Recognition -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">Aitronix Real-Time High-FPS Face Recognition & Stream Engine</span>
+          <span class="entry-meta">Computer Vision & Systems | 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: Python, OpenCV, YuNet, SFace, OpenCL GPU Acceleration, Multithreading, RTSP</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">GPU-Accelerated Face Detection:</span> Implemented single-pass tensor grid face detection (~2.5ms inference on GPU via OpenCL) via <span class="highlight">YuNet</span> and 128D deep embedding extraction via <span class="highlight">SFace</span> with an embedded Cosine Similarity identity matching engine and persistent database profile storage.</li>
+          <li><span class="highlight">Asynchronous Multithreading:</span> Decoupled feature extraction into a non-blocking background worker queue, delivering consistent <span class="highlight">30+ FPS</span> alongside hardware-accelerated OpenCL GPU pipelines for discrete and integrated Intel GPUs.</li>
+          <li><span class="highlight">Low-Latency Stream Ingestion:</span> Developed a custom native LibJPEG byte decoder bypassing network frame buffer lag across IP Webcam, RTSP, and USB feeds to preserve real-time frame delivery.</li>
+        </ul>
+      </div>
+
+      <!-- CamScence & Traffic Analytics -->
+      <div class="entry">
+        <div class="entry-header-row1">
+          <span class="entry-title">CamScence & Spatial Traffic Analytics Deployment</span>
+          <span class="entry-meta">Video Analytics & Edge Vision | 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: YOLO (YOLO26n), RTSP Multi-Streaming (11+ Cameras), Speed Estimation, Heatmaps</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Multi-Camera Edge Infrastructure:</span> Architected a live multi-stream deployment connecting <span class="highlight">11+ RTSP IP camera streams</span> simultaneously with dynamic grid switching and high-throughput frame processing pipelines.</li>
+          <li><span class="highlight">Velocity & Spatial Tracking:</span> Engineered vehicle detection, persistent ID tracking, and real-time speed estimation (<span class="highlight">km/h</span>) across dynamic roadways, paired with interactive spatial heatmaps for density monitoring and bottleneck detection.</li>
+        </ul>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page page-break">
+
+    <!-- Featured Projects (Part 2) -->
+    <section class="section">
+      <div class="section-title"><span class="bar"></span>Featured AI, LLM & Computer Vision Projects (Continued)</div>
+
+      <!-- Real-Time Threat & Burglary Detection -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">Real-Time Video Surveillance for Automated Threat & Burglary Detection</span>
+          <span class="entry-meta">Vision-Language Models & Security</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: Microsoft Florence-2, OpenAI CLIP, OpenCV, Zero-Shot Classification, Phrase Grounding</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Multimodal Activity Recognition:</span> Engineered a second-by-second video analysis pipeline combining Vision-Language Models (<span class="highlight">Microsoft Florence-2, OpenAI CLIP</span>) with OpenCV for automated detection of theft, burglary, and physical violence.</li>
+          <li><span class="highlight">Zero-Shot Visual Grounding:</span> Applied zero-shot visual classification and phrase grounding to score danger probabilities in real-time without traditional retraining, dynamically overlaying contextual visual alert banners on live security feeds.</li>
+        </ul>
+      </div>
+
+      <!-- Open-Vocabulary YOLO-World -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">Open-Vocabulary Real-Time Detection & Tracking (YOLO-World)</span>
+          <span class="entry-meta">Computer Vision & Zero-Shot AI</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: YOLO-World, Open-Vocabulary Vision, PyTorch, Real-Time GPU Tracking (70+ FPS)</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Promptable Zero-Shot Vision:</span> Deployed <span class="highlight">YOLO-World</span> open-vocabulary object detector to detect and track custom arbitrary natural-language prompted concepts (e.g. customized hero suits, emergency vehicles, urban hazards) without dataset annotation or retraining.</li>
+          <li><span class="highlight">High-Speed GPU Execution:</span> Optimized local GPU inference pipelines to process high-speed video streams frame-by-frame at <span class="highlight">70+ FPS</span> with high spatial precision and multi-object continuity.</li>
+        </ul>
+      </div>
+
+      <!-- Dynamic WhatsApp AI Recruitment Assistant & RAG Pipeline -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">Dynamic WhatsApp AI Recruitment Assistant & RAG Pipeline</span>
+          <span class="entry-meta">Independent Project | July 2026</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: n8n, Meta WhatsApp Cloud API, Supabase pgvector, Embeddings, ngrok Tunneling</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Event-Driven Streaming Ingestion:</span> Deployed an automated data pipeline in <span class="highlight">n8n</span> triggered by Google Sheets updates, extracting high-dimensional embeddings via an open-weights embedding server into <span class="highlight">Supabase pgvector</span> without duplicate processing.</li>
+          <li><span class="highlight">Conversational Agent & Tooling:</span> Connected an LLM agent to Meta's WhatsApp Cloud API via ngrok with strict structural reply constraints (&lt;3 sentences) and autonomous vector retrieval tools for recruitment screening and applicant onboarding.</li>
+        </ul>
+      </div>
+
+      <!-- Arabian Horses Graduation Project -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">Integrated AI Ecosystem for Arabian Horses</span>
+          <span class="entry-meta">Graduation Project | Full-Stack & AI Engineer</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: React.js, ASP.NET Core REST API, SQL Server, Python, ConvNeXt Deep Learning</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Full-Stack Enterprise Architecture:</span> Architected an end-to-end multi-role web platform (React frontend + ASP.NET Core REST API backend + SQL Server) for horse auctions, farm management (Marabet), and centralized medical record tracking.</li>
+          <li><span class="highlight">Computer Vision Pedigree & Valuation:</span> Integrated a Python deep learning pipeline utilizing <span class="highlight">ConvNeXt</span> for high-accuracy horse pedigree/strain identification alongside regression models for market valuation and price estimation.</li>
+        </ul>
+      </div>
+
+      <!-- NLP Architecture Benchmark -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">NLP Architecture Benchmark on 50,000 IMDb Reviews</span>
+          <span class="entry-meta">Deep Learning & NLP Research</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: DistilBERT, Transformers, BiLSTM, GRU, TF-IDF + Logistic Regression, Dual T4 FP16</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Comparative Architecture Evaluation:</span> Constructed, trained, and benchmarked 6 distinct architectures on 50K reviews: <span class="highlight">DistilBERT (91.36%)</span>, <span class="highlight">TF-IDF + Logistic Regression (89.94%)</span>, MLP (89.66%), GRU (86.89%), BiLSTM (86.61%), and SimpleRNN (82.82%).</li>
+          <li><span class="highlight">GPU Acceleration & Optimization:</span> Accelerated Transformer fine-tuning on dual Nvidia T4 GPUs with <span class="highlight">FP16 mixed-precision</span>; evaluated sequence memory loss, gradient vanishing dynamics, and tokenization preservation across dense and sparse models.</li>
+        </ul>
+      </div>
+
+      <!-- Mutatawi' Rasmi -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">Mutatawi' Rasmi (متطوع رسمي) — Volunteer & Risk Analytics Portal</span>
+          <span class="entry-meta">Drug Control Fund | Lead Developer</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: Full-Stack Web Development, Geospatial Risk Mapping, Hotspot Analytics, Administrative Portal</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">End-to-End System Development:</span> Built the complete application ecosystem from scratch, designing responsive layouts, backend business logic, and database schemas to coordinate nationwide anti-drug youth initiatives across Egypt.</li>
+          <li><span class="highlight">Geospatial Hotspot Analytics:</span> Engineered data-driven regional risk visualization maps and hotspot tracking across Egyptian governorates for administrative decision-making, volunteer leaderboards, and milestone verification rewards.</li>
+        </ul>
+      </div>
+
+      <!-- Edge Multimodal VQA (Moondream) & Deep Learning Systems -->
+      <div class="entry-p2">
+        <div class="entry-header-row1">
+          <span class="entry-title">Edge Multimodal VQA & Applied Deep Learning Architectures</span>
+          <span class="entry-meta">Applied AI & Deep Learning Systems</span>
+        </div>
+        <div class="entry-header-row2">
+          <span class="entry-tech">Tech Stack: Moondream VLM, ComfyUI, Stable Diffusion, TensorFlow/Keras, 3D CNNs, DCGANs</span>
+        </div>
+        <ul class="entry-bullets">
+          <li><span class="highlight">Lightweight VLM & Live VQA:</span> Deployed <span class="highlight">Moondream VLM</span> locally and in Colab, bridging JavaScript and Python to capture live webcam streams for real-time visual question answering and continuous live video descriptions.</li>
+          <li><span class="highlight">Generative & Surveillance Deep Learning:</span> Engineered multi-checkpoint ComfyUI node workflows; implemented Deep Convolutional GANs (DCGAN) from scratch in TensorFlow/Keras (75 epochs on Anime Faces); built 3D CNN + MobileNet-LSTM violence detection and 38-class plant disease classifier (<span class="highlight">95.4% accuracy</span>).</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Certifications & Professional Credentials -->
+    <section class="section" style="margin-top: 8px;">
+      <div class="section-title"><span class="bar"></span>Certifications & Professional Credentials</div>
+      <div class="cert-container">
+        <div class="cert-item">
+          <div>
+            <strong style="color: #0f172a; font-size: 8.5pt;">Samsung Innovation Campus Certified Professional in Artificial Intelligence & Data Science</strong>
+            <div style="color: #64748b; font-size: 7.9pt; margin-top: 1px;">Issued by Samsung Electronics & Ministry of Communications and Information Technology (MCIT) • Comprehensive Specialization in Machine Learning, Deep Learning, Statistical Modeling, and Computer Vision</div>
+          </div>
+          <div style="font-weight: 700; color: #0284c7; font-size: 8.2pt; white-space: nowrap; margin-left: 12px;">Issued: 2024</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
